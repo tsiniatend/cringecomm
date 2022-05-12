@@ -1,0 +1,664 @@
+ body{
+   font-family: 'Playfair Display', serif;
+  /*font-family: 'Lobster', cursive;*/
+  padding: 0;
+  margin: 0;
+  background-color: #e27d4e;
+background-image: linear-gradient(315deg, #e27d4e 0%, #eeb68c);
+}
+
+/* nav is what allows me to push logo to the side, need to use flexible display and align it to center but what does space between mean? Flex box/ or grid: flex means one way horizontal or vert. Justify content is flex for in between */
+nav{
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+  border: 0px solid #fff;
+  padding: 14px 70px;
+}
+
+.navTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+/*search bar settings*/
+.seach{
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput{
+  border: none;
+  background-color: transparent;
+}
+
+.searchInput::placeholder{
+  color: lightgrey;
+}
+
+/* change later */
+.limitedOffer{
+  font-size: 20px;
+  border-bottom: 2px solid brown;
+  cursor: pointer;
+}
+
+/* the actual tabs spacing */
+ .navBottom{
+display: flex;
+align-items: center;
+justify-content: center;
+ }
+
+/* the actual tabs */
+ .menuItem{
+margin-right: 50px;
+cursor: pointer;
+color: lightgray;
+font-weight: 400;
+ }
+
+/* used url in order to pull online picks, pic path is. acool way to cut up pictures */
+.slider {
+  background: url("https://images.unsplash.com/photo-1614482323419-6f0adaf3be80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); 
+  overflow: hidden;
+
+}
+
+/* image editor */
+.sliderImg{
+width: 680px;
+height: 643px;
+} 
+
+/* the vw stands for the parameters of the slide */
+.sliderMove{
+  display: flex;
+  width: 500vw;
+  transition: all 1.5s ease-in-out;
+}
+
+/* the actual item in background */
+.sliderItem{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* background circle */
+.sliderCircle{
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+  
+}
+
+/* brings it forward */
+.sliderImg{
+  z-index: 1;
+}
+
+/* needed to keep the item def stuck in right side */
+.sliderTitle{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  font-family: 'Bebas Neue', cursive;
+font-family: 'Playfair Display', serif;
+  color: black;
+
+}
+
+
+
+/* the price for first items maybe add effect */
+.sliderPrice{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: hsla(200,0%,0%,.7);
+  border: 0px solid gray;
+  z-index: 1;
+
+}
+
+/*effect when you trynna buy*/
+.buyButton{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Playfair Display', serif;
+}
+
+
+.buyButton:hover{
+  background-color: white;
+  color: black;
+}
+
+/* color of circle */
+ .sliderItem:nth-child(1) .sliderCircle{
+background-color: #fff1d0;
+}
+.sliderItem:nth-child(2) .sliderCircle{
+background-color: #ffd0d2;
+}
+.sliderItem:nth-child(3) .sliderCircle{
+background-color: #D8BFD8
+}
+.sliderItem:nth-child(4) .sliderCircle{
+background-color: #E6E6FA;
+}
+.sliderItem:nth-child(5) .sliderCircle{
+background-color: rgba(255, 0, 0, 0.8);
+}
+
+.featurePage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+.featureDesc{
+  color: white;
+  width: 50%;
+  height: 100px;
+  font-family: 'Lobster', cursive;
+}
+
+/*.product{
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}*/
+
+.productImg{
+  width: 50%;
+}
+
+.productDetails{
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productTitle{
+  font-size: 75px;
+  font-weight: 900;
+}
+
+.productDesc{
+  font-style: 24px;
+  color: gray;
+}
+
+.colors,.sizes{
+  display: flex;
+}
+
+.color{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.clothGrid {
+  height: 500vh;
+  background-color: #ca7968;
+  background-image: linear-gradient(315deg, #ca7968 0%, #0c0c0c 74%);*/
+
+  position: relative;
+  /*clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);*/
+}
+
+/* scroll page */
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(webflic/back.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 250px;
+    cursor: pointer;
+}
+
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: #fff;
+    font-size: 100px;
+    
+    
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+}
+button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(webflic/model.png);
+}
+.card2{
+    background-image: url(webflic/redt.png);
+}
+.card3{
+    background-image: url(webflic/model2.png);
+}
+.card4{
+    background-image: url(webflic/figure.png);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color: hsla(200,0%,0%,.7);
+    text-shadow: 0 0 5px #999;
+    
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
+} 
+
+.featureIcon{
+ width: 155px;
+  height: 185px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    color: #D3D3D3;
+}
+
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.h2 {
+    /*color: #f1dfd1;*/
+ color: #fff;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*---------*/
+
+}
+
+.header .row {
+    margin-top: 70px;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #563434;
+}
+
+/*-----------------------------*/
+.categories {
+    margin: 70px 0;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  color: white;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+
+
+.title {
+    text-align: center;
+    margin: 0px auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title::after {
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+h4 {
+
+    font-weight: normal;
+
+    color: white;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+.rating .fa {
+    color: #ff523b;
+}
+
+.col-4:hover {
+    transform: translateY(-15px);
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .cart-info p {
+        display: none;
+    }
+}
+
+
+
+
+/*.contact-box
+{
+    width: 500px;
+    background-color: ##DCDCDC;
+    box-shadow: 0 0 20px 0 #999;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute; 
+    border-radius: 50px;
+}
+form
+{
+    margin: 35px;
+} */
+
+
+
+
+
+ 
+/*.input-field{
+    width: 400px;
+    height: 40px;
+    margin-top: 25px;
+  
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    border: 3px solid #47c35a;
+    border-radius: 14px;
+    outline: none;
+    background-color: #FFCD00;
+}
+.textarea-field
+{
+   height: 150px;
+   padding-top: 10px;
+   background-color: #FFCD00;
+}
+
+.send
+{
+   border-radius: 20px;
+   color: #fff;
+   margin-top: 18px;
+   padding: 10px;
+   background-color: #800000;
+   font-size: 12px;
+   border: none;
+   cursor: pointer;
+}
+.container2{
+  display: inline-flex;
+  flex-direction: column;
+}*/
+
+
+.contact-box
+{
+    width: 500px;
+    background-color: ##DCDCDC;
+    box-shadow: 0 0 20px 0 #999;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute; 
+    border-radius: 50px;
+}
+form
+{
+    margin: 35px;
+}
+
+
+
+
+
+ 
+.input-field
+{
+    width: 400px;
+    height: 40px;
+  /*space between boxes*/
+    margin-top: 25px;
+  /* space from left to right */
+    padding-left: 10px;
+    padding-right: 10px;
+  /* border patrol */
+    border: 3px solid black;
+    border-radius: 14px;
+    outline: none;
+  background-color: #a55c1b;
+background-image: linear-gradient(315deg, #a55c1b 0%, #000000 74%);
+    
+}
+.textarea-field
+{
+   height: 150px;
+   padding-top: 10px;
+  background-color: #ba9a8e;
+background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%);
+
+
+   
+}
+
+.send
+{
+   border-radius: 20px;
+   color: #fff;
+   margin-top: 18px;
+   padding: 10px;
+   background-color: #800000;
+   font-size: 12px;
+   border: none;
+   cursor: pointer;
+}
+.container2{
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  Background-color: #e27d4e;
+  color: black;
+  width: 100%;
+  text-align: center;
+  bottom: 0; 
+}
+/* navigation bar aligment on top right */
+nav ul li{
+  display: flex;
+align-items: center;
+justify-content: center;
+           /* GO OVER */
+          
+}
+
+/* decoration takes lines off */
+nav ul li a{
+          text-decoration: none; /* GO OVER */
+          color: #fff;
+          font-size: 20px;
+}
